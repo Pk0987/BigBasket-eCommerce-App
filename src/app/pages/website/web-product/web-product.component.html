@@ -1,0 +1,34 @@
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+        <h1 class="display-4 fw-bold" style="color: green;">Bestseller Products</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia minus modi deleniti at consequatur neque doloremque illo commodi atque, officiis ex doloribus possimus qui. Unde sint voluptate repudiandae? Error nostrum quos atque sed!</p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-lg-6 col-xl-4 " *ngFor="let product of productList">
+            <div class="p-4 rounded bg-light">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <img class="img-fluid rounded-circle w-100" [src]="product.productImageUrl" alt="">
+                    </div>
+                    <div class="col-6">
+                        <a href="#" class="h5">{{product.productShortName}}</a>
+                        <div class="d-flex my-3">
+                        <i class="fa fa-star text-primary"></i>
+                        <i class="fa fa-star text-primary"></i>
+                        <i class="fa fa-star text-primary"></i>
+                        <i class="fa fa-star text-primary"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                            <p class="text mb-3"><span
+                                class="text-danger fw-semibold me-2">$ {{product.productPrice}}</span><del> $55.25</del>
+                            <span class="text-success ms-2">35% Off</span>
+                        </p>
+                                <a href="#" class="btn btn-outline-success rounded-pill px-2 fw-small"><i class="fa fa-shopping-bag me-2" ></i>Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
